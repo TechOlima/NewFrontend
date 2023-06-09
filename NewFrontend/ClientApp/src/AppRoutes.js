@@ -6,6 +6,7 @@ import { ProductType } from "./components/ProductType";
 import { Photo } from "./components/Photo";
 import { StoneType } from "./components/StoneType";
 import { Order } from "./components/Order";
+import { Supply } from "./components/Supply";
 
 const AppRoutes = [
     {
@@ -39,6 +40,10 @@ const AppRoutes = [
     {
         path: '/order',
         element: <Order />
+    },
+    {
+        path: '/supply',
+        element: <Supply />
     }
 ];
 
