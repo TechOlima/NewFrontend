@@ -7,6 +7,7 @@ import { Photo } from "./components/Photo";
 import { StoneType } from "./components/StoneType";
 import { Order } from "./components/Order";
 import { Supply } from "./components/Supply";
+import { VK } from "./components/VK";
 
 const AppRoutes = [
     {
@@ -44,6 +45,10 @@ const AppRoutes = [
     {
         path: '/supply',
         element: <Supply />
+    },
+    {
+        path: '/vk',
+        element: <VK />
     }
 ];
 
