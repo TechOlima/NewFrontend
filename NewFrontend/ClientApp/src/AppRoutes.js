@@ -5,6 +5,7 @@ import { Home } from "./components/Home";
 import { ProductType } from "./components/ProductType";
 import { Photo } from "./components/Photo";
 import { StoneType } from "./components/StoneType";
+import { Order } from "./components/Order";
 
 const AppRoutes = [
     {
@@ -34,6 +35,10 @@ const AppRoutes = [
     {
         path: '/stonetype',
         element: <StoneType />
+    },
+    {
+        path: '/order',
+        element: <Order />
     }
 ];
 

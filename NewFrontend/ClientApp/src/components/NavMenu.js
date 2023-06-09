@@ -33,7 +33,7 @@ export class NavMenu extends Component {
       return (
       <header>
         <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" container light>
-          <NavbarBrand tag={Link} to="/">Olima v1 - Товары</NavbarBrand>
+          <NavbarBrand tag={Link} to="/">Olima v2 - Заказы</NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
           <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
             <ul className="navbar-nav flex-grow">
@@ -42,7 +42,10 @@ export class NavMenu extends Component {
               </NavItem> 
               <NavItem>
                 <NavLink tag={Link} className="text-dark" to="/product">Товары</NavLink>
-                </NavItem>                
+                          </NavItem>
+                <NavItem>
+                    <NavLink tag={Link} className="text-dark" to="/order">Заказы</NavLink>
+                </NavItem>
                 <UncontrolledButtonDropdown>
                     <DropdownToggle nav caret>
                         Справочники
