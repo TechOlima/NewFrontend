@@ -1,0 +1,11 @@
+{
+  "owner_id": "-220761511",
+  "category_id": "5005",
+  "client_id": "51653671",
+  "client_secret": "F3jxyY0jQj4qdyaUpNHl",
+  "redirect_uri": "https://frontend-v3-20230523124029.azurewebsites.net/vk",
+  "group_id": "220761511",
+  "version": "5.131",
+  "mkr_service_url": "https://mkr-v3-20230528112307.azurewebsites.net/api",
+  "apiurl": "https://localhost:7184/api"
+}
