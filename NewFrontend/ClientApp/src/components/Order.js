@@ -269,7 +269,18 @@ export class Order extends Component {
                                                 >
                                                 </Input>
 
-                                            </FormGroup>                                            
+                                            </FormGroup>
+                                            <FormGroup check>
+                                                <Input type="checkbox"
+                                                    checked={this.state.activeOrder ? this.state.activeOrder.smsNotification : false}
+                                                    onChange={(ev) => {
+                                                        this.changeActiveOrder(ev.target.checked, 'smsNotification');
+                                                    }} />
+                                                {' '}
+                                                <Label check>
+                                                    Уведомлять по телефону
+                                                </Label>
+                                            </FormGroup>
                                             <FormGroup>
                                                 <Label for="clientEmail">
                                                     Email
@@ -283,7 +294,17 @@ export class Order extends Component {
                                                     }}
                                                 >
                                                 </Input>
-                                            </FormGroup>                                            
+                                            </FormGroup>
+                                            <FormGroup check>
+                                                <Input type="checkbox" checked={this.state.activeOrder ? this.state.activeOrder.emailNotification : false}
+                                                    onChange={(ev) => {
+                                                        this.changeActiveOrder(ev.target.checked, 'emailNotification');
+                                                    }} />
+                                                {' '}
+                                                <Label check>
+                                                    Уведомлять по email
+                                                </Label>
+                                            </FormGroup>
                                         </CardBody>
                                     </Card>                                    
                                 </Col>
@@ -651,7 +672,16 @@ export class Order extends Component {
                     </ModalBody>
                     <ModalFooter>
                         {this.state.activeOrder ? this.state.activeOrder.orderID ?
-                            <div>                                
+                            <div>
+                                {this.state.activeOrder.state !== 'В доставке' && this.state.activeOrder.state !== 'Выполнен' ?
+                                    <Button onClick={() => this.orderChangeState('В доставке')}>
+                                        Передать в доставку
+                                    </Button> : ''}
+                                {' '}
+                                {this.state.activeOrder.state !== 'Выполнен' ?
+                                    <Button onClick={() => this.orderChangeState('Выполнен')}>
+                                        Отметить выполненным
+                                    </Button> : ''}
                                 {' '}
                                 <Button color="danger" onClick={this.deleteActiveOrder}>
                                     Удалить
